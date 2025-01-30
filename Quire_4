@@ -1,0 +1,5 @@
+SELECT T.ID, T.course_id
+FROM takes T
+GROUP BY T.ID, T.course_id
+HAVING COUNT(*) >= 3
+ORDER BY T.course_id, T.ID;
