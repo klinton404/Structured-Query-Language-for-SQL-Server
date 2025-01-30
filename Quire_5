@@ -1,0 +1,7 @@
+SELECT DISTINCT S.name
+FROM student S
+JOIN takes T ON S.ID = T.ID
+JOIN course C ON T.course_id = C.course_id
+WHERE S.dept_name = 'Biology' AND C.dept_name = 'Accounting'
+GROUP BY S.ID
+HAVING COUNT(DISTINCT T.course_id) >= 3;
