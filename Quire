@@ -1,0 +1,3 @@
+SELECT dept_name  FROM Department
+WHERE Budget > (SELECT Budget FROM Department WHERE dept_name = 'Astronomy')
+ORDER BY dept_name;
